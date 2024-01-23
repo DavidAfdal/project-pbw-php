@@ -19,27 +19,15 @@
         exit;
       }  else {
         # checking the database if the username is taken
-        $sql = "SELECT nidn 
-                FROM dosen
-                WHERE nidn=?";
-     $stmt = $conn->prepare($sql);
-     $stmt->execute([$nidn]);
-
-     if($stmt->rowCount() > 0){
-         $em = "The nidn ($nidn) is taken";
-         header("Location: ../regiter.php?error=$em&$data");
-          exit;
-     }else {
-         $password = password_hash($password, PASSWORD_DEFAULT);
-           $sql = "INSERT INTO dosen
-                   (nidn, nama, password)
+           $sql = "INSERT INTO anggota_dosen
+                   (nidn, nama, id_proposal)
                    VALUES (?,?,?)";
            $stmt = $conn->prepare($sql);
-           $stmt->execute([$nidn, $nama, $password]);
+           $stmt->execute([$nidn, $nama, $id_proposal]);
          $sm = "Account created successfully";
          header("Location: ../login.php?success=$sm");
         exit;
-     }
+     
 
   }
 
