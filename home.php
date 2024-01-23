@@ -6,9 +6,15 @@
   <body>
     <div class="home">
       <?php include("./partials/navbar.php"); ?>
-
-      <!-- proposal kosong -->
-      <div class="daftar-box">
+      <?php 
+      $nidn_dosen = $_SESSION['nidn'];
+      $stmt = $conn->prepare("SELECT * FROM proposal WHERE nidn_dosen = ?"); 
+      $stmt->execute([$nidn_dosen]);
+      $proposals = $stmt->fetchAll();
+?>
+<?php if(count($proposals) < 1) { 
+     echo '
+     <div class="daftar-box">
         <div class="">
           <h3>Daftar Proposal Saya :</h3>
         </div>
@@ -19,10 +25,13 @@
           <a href="form.php"> Tambah Proposal </a>
         </div>
       </div>
-      <!-- proposal kosong -->
+     ';
+
+    } else { ?>
 
       <!-- daftar propasal -->
-      <!-- <div class="check-box">
+      <?php foreach ($proposals as $proposal): ?>
+        <div class="check-box">
         <div class="">
           <h3>Daftar Proposal Saya :</h3>
         </div>
@@ -55,7 +64,11 @@
         <div class="proposal-btn">
           <a href=""> Tambah Proposal </a>
         </div>
-      </div> -->
+      </div>
+        ?>
+        <?php endforeach; ?>
+    <?php } ?>
+      
       <!-- daftar propasal -->
 
 

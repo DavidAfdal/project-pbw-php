@@ -5,8 +5,8 @@ if(isset($_POST['nidn']) && isset($_POST['password'])){
 
   include 'db-config.php';
 
-  $password = ['password'];
-  $nidn = ['nidn'];
+  $password = $_POST['password'];
+  $nidn = $_POST['nidn'];
 
   if(empty($nidn)){
     $em = 'NIDN is required';
@@ -23,7 +23,7 @@ if(isset($_POST['nidn']) && isset($_POST['password'])){
     $stmt->execute([$nidn]);
 
     if($stmt->rowCount() === 1){
-      $user = $stmt->fecth();
+      $user = $stmt->fetch();
 
       if($user['nidn'] === $nidn){
 
