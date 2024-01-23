@@ -9,11 +9,11 @@
           <?php include("./partials/navbar.php"); ?>
           <div class="check-box">
         <div class="d-flex justify-content-between align-items-center mb-5">
-          <h3>Daftar Proposal Saya :</h3>
+          <h3>Detail Proposal :</h3>
           <div class="">
             <a href="" class="review-btn">
               <i class="bx bx-check-circle"></i>
-              Sudah Baik
+              Sedang Ditinjau 
             </a>
           </div>
         </div>
@@ -21,13 +21,8 @@
           <div class="">
             <img src="./assets/proposal.png" alt="" />
             <div
-              class="footer-proposal d-flex justify-content-between align-items-center"
-            >
-              <p>Penelitian A</p>
-              <span class="d-flex align-items-center gap-2">
-                <i class="bx bx-check-circle"></i>
-                <p>Sudah Baik</p>
-              </span>
+              class="footer-proposal d-flex justify-content-between align-items-center">
+              <p>Download</p>
             </div>
           </div>
           <div class="">
@@ -44,6 +39,10 @@
               <p class="member">09 Desember 2023</p>
             </div>
             <div class="">
+              <p class="m-0 title">Skema :</p>
+              <p class="member">Metode RAD</p>
+            </div>
+            <div class="">
               <p class="m-0 title">Topik :</p>
               <p class="member">Proposal Penelitian</p>
             </div>
@@ -52,16 +51,27 @@
               <p class="member">Penelitian</p>
             </div>
             <div class="">
+              <p class="m-0 title">Mitra :</p>
+              <p class="member">PT. INDOSAT</p>
+            </div>
+            <div class="">
               <p class="m-0 title">Anggota :</p>
-              <u class="member"l>
+              <p class="member">
                 <li>Cahyadi</li>
                 <li>Azizah</li>
-              </u>
-            </div>
+              </p>
+            </div>    
           </div>
         </div>
-        <div class="proposal-komen">
-          
+          <div class="proposal-komen d-flex justify-content-between align-items-center">
+          <div class="">
+              <p>Waluyo (Peninjau)</p>
+              <p>Komentar :</p>
+          <div class="komentar">
+              <p>Terdapat yang perlu direvisi</p>
+            </div>
+          </div>
+
         </div>
       </div>
       <?php include("./partials/footer.php"); ?>
