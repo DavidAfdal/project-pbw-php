@@ -32,11 +32,11 @@
     } else { ?>
 
       <!-- daftar propasal -->
+      <div class="check-box">
+      <div class="">
+        <h3>Daftar Proposal Saya :</h3>
+      </div>
       <?php foreach ($proposals as $proposal): ?>
-        <div class="check-box">
-        <div class="">
-          <h3>Daftar Proposal Saya :</h3>
-        </div>
         <div class="d-flex justify-content-between">
           <div class="">
             <img src="./assets/proposal.png" alt="" />
@@ -63,13 +63,13 @@
             </div>
           </div>
         </div>
+    
+        <?php endforeach; ?>
         <div class="proposal-btn">
-          <a href=""> Tambah Proposal </a>
+          <a href="form.php"> Tambah Proposal </a>
         </div>
       </div>
-        ?>
-        <?php endforeach; ?>
-    <?php } ?>
+        <?php } ?>
       
       <!-- daftar propasal -->
 
