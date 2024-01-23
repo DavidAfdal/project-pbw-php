@@ -6,6 +6,7 @@
 
       $nidn = $_POST['nidn'];
       $nama = $_POST['nama'];
+      $id_proposal = $_GET['id_proposal'];
 
 
 
@@ -24,8 +25,8 @@
                    VALUES (?,?,?)";
            $stmt = $conn->prepare($sql);
            $stmt->execute([$nidn, $nama, $id_proposal]);
-         $sm = "Account created successfully";
-         header("Location: ../login.php?success=$sm");
+         $sm = "Sukses tambah annggota";
+         header("Location: ../.php?id_proposal=$id_proposal&success=$sm");
         exit;
      
 

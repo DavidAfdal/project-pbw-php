@@ -35,7 +35,7 @@ Mitra
             </div>
           </div>
         </form>
-        <form action=""  id="formMahasiswa" style="display: none;">
+        <form action=""  id="formMahasiswa" >
           <label for="">NPM</label>
           <input type="text" name="" id="" />
           <label for="">Nama Lengkap</label>
