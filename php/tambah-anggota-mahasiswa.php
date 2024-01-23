@@ -1,6 +1,6 @@
 <?php 
 
-   if(isset($_POST['nidn']) && isset($_POST['nama'])) {
+   if(isset($_POST['npm']) && isset($_POST['nama'])) {
       
       include "db-config.php";
 
@@ -12,11 +12,11 @@
 
       if(empty($npm)) {
         $errMsg = "npm is required";
-        header("Location: ../anggota.php?error=$errMsg");
+        header("Location: ../anggota.php??id_proposal=$id_proposal&error=$errMsg");
         exit;
       } else if(empty($nama)) {
         $errMsg = "nama is required";
-        header("Location: ../anggota.php?error=$errMsg");
+        header("Location: ../anggota.php?id_proposal=$id_proposal&error=$errMsg");
         exit;
       }  else {
         # checking the database if the username is taken
@@ -33,7 +33,7 @@
   }
 
    } else {
-    header("Location: ../anggota.php");
+    header("Location: ../anggota.php?id_proposal=$id_proposal");
     exit;
    } 
 
