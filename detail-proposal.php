@@ -4,14 +4,6 @@
 <head>
 <?php include("./partials/head.php"); ?>
 
-<?php 
-
-session_start();
-include "./php/db-config.php";
-  if (!isset($_SESSION['nidn'] ) && !isset($_SESSION['role'])) {
-    header("Location: login.php");
-  }
-?>
 </head>
 <body>
           <!-- review proposal -->
@@ -23,10 +15,13 @@ include "./php/db-config.php";
           $stmt = $conn->prepare("SELECT *
         FROM proposal
         INNER JOIN <?php 
-  $proposalId = $_GET["proposal_id"];
-  $stmt = $conn->prepare("SELECT *
-FROM proposal
-INNER JOIN users ON proposal.nid_user=users.nid WHERE proposal.proposal_id = ?"); 
+        $proposalId = $_GET["proposal_id"];
+        $stmt = $conn->prepare("SELECT *
+        FROM table1
+        INNER JOIN table2
+        ON table1.id = table2.id
+        INNER JOIN table3
+        ON table2.id = table3.id"); 
 $stmt->execute([$proposalId]);
 $proposal= $stmt->fetch(); 
 ?>  ON proposal.nid_user=users.nid WHERE proposal.proposal_id = ?"); 

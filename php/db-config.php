@@ -12,7 +12,7 @@ $db_name = "klinik-proposal";
 
 #creating database connection
 try {
-    $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
+    $conn = new PDO("mysql:host=$sName;port= 3307;dbname=$db_name", 
                     $uName, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
