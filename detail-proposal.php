@@ -11,23 +11,20 @@
           <?php include("./partials/navbar.php"); ?>
           <div class="check-box">
           <?php 
-          $proposalId = $_GET["proposal_id"];
-          $stmt = $conn->prepare("SELECT *
-        FROM proposal
-        INNER JOIN <?php 
-        $proposalId = $_GET["proposal_id"];
-        $stmt = $conn->prepare("SELECT *
-        FROM table1
-        INNER JOIN table2
-        ON table1.id = table2.id
-        INNER JOIN table3
-        ON table2.id = table3.id"); 
-$stmt->execute([$proposalId]);
-$proposal= $stmt->fetch(); 
-?>  ON proposal.nid_user=users.nid WHERE proposal.proposal_id = ?"); 
-        $stmt->execute([$proposalId]);
-        $proposal= $stmt->fetch(); 
-        ?> 
+  $proposalId = $_GET["id_proposal"];
+  $stmt = $conn->prepare("SELECT * FROM proposal WHERE id = ?"); 
+  $stmt->execute([$proposalId]);
+  $proposal= $stmt->fetch(); 
+  $stmt2 = $conn->prepare("SELECT *FROM anggota_dosen WHERE id_proposal = ?"); 
+  $stmt2->execute([$proposalId]);
+  $anggota_dosen= $stmt2->fetchAll();   
+  $stmt3 = $conn->prepare("SELECT * FROM anggota_mahasiswa WHERE id_proposal = ?"); 
+  $stmt3->execute([$proposalId]);
+  $anggota_mahasiwa= $stmt3->fetchAll();   
+  $stmt4 = $conn->prepare("SELECT * FROM mitra WHERE id_proposal = ?"); 
+  $stmt4->execute([$proposalId]);
+  $mitra = $stmt4->fetchAll(); 
+?> 
         <div class="d-flex justify-content-between align-items-center mb-5">
           <h3>Detail Proposal :</h3>
           <div class="">
@@ -42,47 +39,59 @@ $proposal= $stmt->fetch();
             <img src="./assets/proposal.png" alt="" />
             <div
               class="footer-proposal d-flex justify-content-between align-items-center">
-              <p>Download</p>
+              <a href="php/download.php?url=<?php echo $proposal['file']?>">
+                <p>Download</p>
+              </a>
             </div>
           </div>
           <div class="">
             <div class="">
               <p class="m-0 title">Nama Peneliti :</p>
-              <p class="member">Mahesa Cahyadi</p>
+              <p class="member"><?= $proposal["peneliti"] ?></p>
             </div>
             <div class="">
               <p class="m-0 title">Judul Peneliti :</p>
-              <p class="member">Perancangan Aplikasi Manajemen Keuangan Untuk PT.ABC</p>
+              <p class="member"><?= $proposal["judul"] ?></p>
             </div>
             <div class="">
               <p class="m-0 title">Tanggal Pembuatan Proposal :</p>
-              <p class="member">09 Desember 2023</p>
+              <p class="member"><?= date('d F Y', strtotime($proposal["tanggal"])) ?></p>
             </div>
             <div class="">
               <p class="m-0 title">Skema :</p>
-              <p class="member">Metode RAD</p>
+              <p class="member"><?= $proposal["skema"] ?></p>
             </div>
             <div class="">
               <p class="m-0 title">Topik :</p>
-              <p class="member">Proposal Penelitian</p>
+              <p class="member"><?= $proposal["topik"] ?></p>
             </div>
             <div class="">
               <p class="m-0 title">Bidang Ilmu :</p>
-              <p class="member">Penelitian</p>
+              <p class="member"><?= $proposal["bidang_ilmu"] ?></p>
             </div>
+            <?php if(count($mitra) >= 1) { ?>
             <div class="">
               <p class="m-0 title">Mitra :</p>
-              <p class="member">PT. INDOSAT</p>
+              <?php foreach ($mitra as $mitra): ?>   
+                <p class="member"><?= $mitra["nama"] ?> - <?= $mitra["Pemimpin"] ?></p>
+              <?php endforeach; ?>
             </div>
-            <div class="">
+            <?php }; ?>
+            <?php if(count($anggota_dosen) >= 1 || count($anggota_mahasiwa) >= 1) { ?>
+              <div class="">
               <p class="m-0 title">Anggota :</p>
               <p class="member">
-                <li>Cahyadi</li>
-                <li>Azizah</li>
+              <?php foreach ($anggota_dosen as $anggota_dosen): ?>   
+                <li><?= $anggota_dosen["nama"] ?> (<?= $anggota_dosen["nidn"] ?>)</li>
+              <?php endforeach; ?>
+              <?php foreach ($anggota_mahasiwa as $anggota_mahasiwa): ?>   
+                <li><?= $anggota_mahasiwa["nama"] ?> (<?= $anggota_mahasiwa["npm"] ?>)</li>
+              <?php endforeach; ?>
               </p>
             </div>    
+            <?php }; ?>
+            
           </div>
-          <p>testes</P>
         </div>
           <div class="proposal-komen">
           <div class="">
