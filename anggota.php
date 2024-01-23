@@ -21,32 +21,25 @@
 Mitra
 </div>
         </div>
-        <form action=""  id="formDosen">
+        <form action="./php/tambah-anggota-dosen.php" method="post" id="formDosen" style="display: none;">
           <label for="">NIDN</label>
-          <input type="text" name="" id="" />
+          <input type="text" name="nidn" id="nidn" />
           <label for="">Nama Lengkap</label>
-          <input type="text" name="" id="" />
+          <input type="text" name="nama" id="nama" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
-            <div class="next-btn">
-              <a href="">Tambah</a>
-            </div>
-            <div class="close-btn">
-              <a href="">Batal</a>
-            </div>
+              <button type="submit" class="next-btn">Tambah</button>
+              <button type="submit" class="close-btn">Batal</button>
           </div>
         </form>
-        <form action=""  id="formMahasiswa" style="display: none;">
+
+        <form action="./php/tambah-anggota-mahasiswa.php"  id="formMahasiswa">
           <label for="">NPM</label>
           <input type="text" name="" id="" />
           <label for="">Nama Lengkap</label>
           <input type="text" name="" id="" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
-          <div class="next-btn">
-            <a href="">Tambah</a>
-          </div>
-          <div class="close-btn">
-            <a href="">Batal</a>
-          </div>
+              <button type="submit" class="next-btn">Tambah</button>
+              <button type="submit" class="close-btn">Batal</button>
         </div>
         </form>
        
@@ -56,12 +49,8 @@ Mitra
           <label for="">Nama Mitra</label>
           <input type="text" name="" id="" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
-            <div class="next-btn">
-              <a href="">Tambah</a>
-            </div>
-            <div class="close-btn">
-              <a href="">Batal</a>
-            </div>
+                <button type="submit" class="next-btn">Tambah</button>
+                <button type="submit" class="close-btn">Batal</button>
           </div>
         </div>
         </form>
