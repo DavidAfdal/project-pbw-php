@@ -4,6 +4,8 @@
       
       include "db-config.php";
 
+      $getData = "SELECT * anggota_dosen
+      WHERE nidn = $"; 
       $nidn = $_POST['nidn'];
       $nama = $_POST['nama'];
 
