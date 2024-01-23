@@ -15,6 +15,14 @@ body a{
     position: relative;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+    margin-top: 20px;
+}
+
 .home{
     background-image: url("../assets/background.png");
     background-position: center;

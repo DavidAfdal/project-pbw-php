@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
   <?php include("./partials/head.php"); ?>
+
   </head>
   <body>
     <div class="background">
@@ -9,13 +10,14 @@
         <h2 class="">Masuk</h2>
         <div class="login-box">
           <h3>Selamat Datang di Klinik Proposal</h3>
-          <form action="">
+          <form action="./php/auth.php"
+                method="post">
             <label for="">NIDN :</label>
-            <input type="text" name="" id="" />
+            <input type="text" name="nidn" id="" />
             <label for="">Kata Sandi :</label>
-            <input type="password" name="" id="" />
+            <input type="password" name="password" id="" />
+            <button type="submit">Masuk</button>
           </form>
-          <button>Masuk</button>
         </div>
       </div>
     </div>

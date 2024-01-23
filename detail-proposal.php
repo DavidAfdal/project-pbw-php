@@ -62,6 +62,7 @@
               </p>
             </div>    
           </div>
+          <p>testes</P>
         </div>
           <div class="proposal-komen d-flex justify-content-between align-items-center">
           <div class="">

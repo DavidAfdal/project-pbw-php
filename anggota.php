@@ -6,6 +6,7 @@
   <body>
     <div class="home">
      <?php include("./partials/navbar.php"); ?>
+     
 
       <!-- anggota form -->
       <div class="member-box">
