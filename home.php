@@ -16,7 +16,7 @@
           <h1>Anda belum Menambahkan Proposal</h1>
         </div>
         <div class="proposal-btn">
-          <a href=""> Tambah Proposal </a>
+          <a href="form.php"> Tambah Proposal </a>
         </div>
       </div>
       <!-- proposal kosong -->
