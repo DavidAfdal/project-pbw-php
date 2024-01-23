@@ -21,7 +21,7 @@
 Mitra
 </div>
         </div>
-        <form action="./php/tambah-anggota-dosen.php" method="post" id="formDosen" style="display: none;">
+        <form action="./php/tambah-anggota-dosen.php?id_proposal=<?php echo $_GET["id_proposal"]; ?>" method="post" id="formDosen" style="display: none;">
           <label for="">NIDN</label>
           <input type="text" name="nidn" id="nidn" />
           <label for="">Nama Lengkap</label>
@@ -31,7 +31,6 @@ Mitra
               <button type="submit" class="close-btn">Batal</button>
           </div>
         </form>
-
         <form action="./php/tambah-anggota-mahasiswa.php"  id="formMahasiswa">
           <label for="">NPM</label>
           <input type="text" name="" id="" />
