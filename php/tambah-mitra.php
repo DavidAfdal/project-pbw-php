@@ -25,7 +25,7 @@
         VALUES (?,?,?, NOW(), NOW())";
           $stmt = $conn->prepare($sql);
           $stmt->execute([$pemimpin, $nama, $id_proposal]); 
-         $sm = "Sukses tambah annggota";
+         $sm = "Sukses tambah anggota";
          header("Location: ../anggota.php?id_proposal=$id_proposal&success=$sm");
         exit;
      
