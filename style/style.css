@@ -254,8 +254,14 @@ button{
     margin: 0;
 }
 
-.footer-proposal span a{
+.link{
     cursor: pointer;
+    color: #fff;
+}
+
+.link:hover{
+    cursor: pointer;
+    color: #fff;
 }
 
 .footer-proposal i{
@@ -442,5 +448,12 @@ button.close-btn{
 }
 
 .file{
-    
+    width: 100%;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.input-file{
+    margin-bottom: 0;
 }

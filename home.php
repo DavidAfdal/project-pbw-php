@@ -38,7 +38,7 @@
       </div>
       <div class="grid">
       <?php foreach ($proposals as $proposal): ?>
-          <a href="detail-proposal.php?id_proposal=<?php echo $proposal["id"] ?>" > 
+          <a href="detail-proposal.php?id_proposal=<?php echo $proposal["id"] ?>" class="link" > 
           <div class="">
             <img src="./assets/proposal.png" alt="" />
             <div
