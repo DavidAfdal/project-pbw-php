@@ -26,9 +26,9 @@
           <label for="">Bidang Ilmu</label>
           <input type="text" name="" id="" />
           <label for="">Uploud Proposal (PDF)</label>
-          <input type="text" name="" id="" />
+          <input type="file" class="" name="" id="" />
         </form>
-        <div class="pr oposal-btn">
+        <div class="proposal-btn">
           <a href=""> Kirim Proposal </a>
         </div>
       </div>

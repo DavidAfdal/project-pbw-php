@@ -64,7 +64,7 @@
           </div>
           <p>testes</P>
         </div>
-          <div class="proposal-komen d-flex justify-content-between align-items-center">
+          <div class="proposal-komen">
           <div class="">
               <p>Waluyo (Peninjau)</p>
               <p>Komentar :</p>
