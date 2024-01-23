@@ -43,11 +43,11 @@ Mitra
         </div>
         </form>
        
-        <form action=""  id="formMitra"  style="display: none;">
+        <form action="./php/tambah-mitra.php?id_proposal=<?php echo $_GET["id_proposal"]; ?>" method="post" id="formMitra" style="display: none;">
           <label for="">Pemimpin</label>
-          <input type="text" name="" id="" />
+          <input type="text" name="pemimpin" id="pemimpin" />
           <label for="">Nama Mitra</label>
-          <input type="text" name="" id="" />
+          <input type="text" name="nama" id="nama" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
                 <button type="submit" class="next-btn">Tambah</button>
                 <button type="submit" class="close-btn">Batal</button>

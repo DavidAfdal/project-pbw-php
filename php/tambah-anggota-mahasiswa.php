@@ -12,7 +12,7 @@
 
       if(empty($npm)) {
         $errMsg = "npm is required";
-        header("Location: ../anggota.php??id_proposal=$id_proposal&error=$errMsg");
+        header("Location: ../anggota.php?id_proposal=$id_proposal&error=$errMsg");
         exit;
       } else if(empty($nama)) {
         $errMsg = "nama is required";
