@@ -9,15 +9,15 @@
         <h2 class="">Daftar</h2>
         <div class="login-box">
           <h3>Selamat Datang di Klinik Proposal</h3>
-          <form action="">
+          <form action="./php/register-auth.php" method="post">
             <label for="">NIDN :</label>
-            <input type="text" name="" id="" />
+            <input type="text" name="nidn" id="" />
             <label for="">Nama :</label>
-            <input type="text" name="" id="" />
+            <input type="text" name="nama" id="" />
             <label for="">Kata Sandi :</label>
-            <input type="password" name="" id="" />
+            <input type="password" name="password" id="" />
+            <button type="submit">Daftar</button>
           </form>
-          <button>Daftar</button>
         </div>
       </div>
     </div>
