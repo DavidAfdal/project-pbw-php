@@ -20,11 +20,11 @@
         exit;
       }  else {
         # checking the database if the username is taken
-           $sql = "INSERT INTO anggota_dosen
-                   (nidn, nama, id_proposal)
-                   VALUES (?,?,?)";
-           $stmt = $conn->prepare($sql);
-           $stmt->execute([$nidn, $nama, $id_proposal]);
+        $sql = "INSERT INTO anggota_dosen
+        (nidn, nama, id_proposal, created_at, updated_at)
+        VALUES (?,?,?, NOW(), NOW())";
+          $stmt = $conn->prepare($sql);
+          $stmt->execute([$nidn, $nama, $id_proposal]); 
          $sm = "Sukses tambah annggota";
          header("Location: ../anggota.php?id_proposal=$id_proposal&success=$sm");
         exit;

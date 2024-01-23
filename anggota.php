@@ -31,11 +31,12 @@ Mitra
               <button type="submit" class="close-btn">Batal</button>
           </div>
         </form>
-        <form action="./php/tambah-anggota-mahasiswa.php"  id="formMahasiswa">
+
+        <form action="./php/tambah-anggota-mahasiswa.php?id_proposal=<?php echo $_GET["id_proposal"]; ?>" method="post" id="formMahasiswa">
           <label for="">NPM</label>
-          <input type="text" name="" id="" />
+          <input type="text" name="npm" id="npm" />
           <label for="">Nama Lengkap</label>
-          <input type="text" name="" id="" />
+          <input type="text" name="nama" id="nama" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
               <button type="submit" class="next-btn">Tambah</button>
               <button type="submit" class="close-btn">Batal</button>
