@@ -2,12 +2,36 @@
 <html lang="en">
 <head>
 <?php include("./partials/head.php"); ?>
+
+<?php 
+
+session_start();
+include "./php/db-config.php";
+  if (!isset($_SESSION['nidn'] ) && !isset($_SESSION['role'])) {
+    header("Location: login.php");
+  }
+?>
 </head>
 <body>
           <!-- review proposal -->
           <div class="home">
           <?php include("./partials/navbar.php"); ?>
           <div class="check-box">
+          <?php 
+          $proposalId = $_GET["proposal_id"];
+          $stmt = $conn->prepare("SELECT *
+        FROM proposal
+        INNER JOIN <?php 
+  $proposalId = $_GET["proposal_id"];
+  $stmt = $conn->prepare("SELECT *
+FROM proposal
+INNER JOIN users ON proposal.nid_user=users.nid WHERE proposal.proposal_id = ?"); 
+$stmt->execute([$proposalId]);
+$proposal= $stmt->fetch(); 
+?>  ON proposal.nid_user=users.nid WHERE proposal.proposal_id = ?"); 
+        $stmt->execute([$proposalId]);
+        $proposal= $stmt->fetch(); 
+        ?> 
         <div class="d-flex justify-content-between align-items-center mb-5">
           <h3>Detail Proposal :</h3>
           <div class="">
