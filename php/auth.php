@@ -32,7 +32,7 @@ if(isset($_POST['nidn']) && isset($_POST['password'])){
           $_SESSION['nidn'] = $user['nidn'];
           $_SESSION['role'] = $user['role'];
 
-          if($user['role' == 'dosen']){
+          if($user['role'] == 'dosen'){
             header('location: ../home.php');
           } else{
             header('location: ../admin.php');
