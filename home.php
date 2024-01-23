@@ -36,35 +36,25 @@
       <div class="">
         <h3>Daftar Proposal Saya :</h3>
       </div>
+      <div class="grid">
       <?php foreach ($proposals as $proposal): ?>
-        <div class="d-flex justify-content-between">
           <div class="">
             <img src="./assets/proposal.png" alt="" />
             <div
               class="footer-proposal d-flex justify-content-between align-items-center"
             >
-              <p>Penelitian A</p>
+              <p><?= $proposal['judul'] ?></p>
               <span class="d-flex align-items-center gap-2">
                 <i class="bx bx-check-circle"></i>
-                <p>Sudah Baik</p>
+                <p><?= $proposal['status'] ?></p>
               </span>
             </div>
-          </div>
-          <div class="">
-            <img src="./assets/proposal.png" alt="" />
-            <div
-              class="footer-proposal d-flex justify-content-between align-items-center"
-            >
-              <p>Penelitian A</p>
-              <span class="d-flex align-items-center gap-2">
-                <i class='bx bxs-show'></i>
-                <a>Review</a>
-              </span>
-            </div>
-          </div>
-        </div>
-    
-        <?php endforeach; ?>
+          </div>          
+      <?php endforeach; ?>
+
+      </div>
+     
+        
         <div class="proposal-btn">
           <a href="form.php"> Tambah Proposal </a>
         </div>
