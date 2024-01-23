@@ -1,6 +1,6 @@
 <?php 
 
-   if(isset($_POST['nidn']) && isset($_POST['nama'])) {
+   if(isset($_POST['npm']) && isset($_POST['nama'])) {
       
       include "db-config.php";
 
