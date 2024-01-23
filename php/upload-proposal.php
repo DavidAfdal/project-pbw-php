@@ -17,15 +17,15 @@
         header("Location: ../tambah-proposal.php?error=$errMsg");
         exit;
       } else if(empty($peneliti)) {
-        $errMsg = "Anggota TIm is required";
+        $errMsg = "Peneliti is required";
         header("Location: ../tambah-proposal.php?error=$errMsg");
         exit;
       } else if(empty($tanggal)) {
-        $errMsg = "Anggota TIm is required";
+        $errMsg = "Tanggal is required";
         header("Location: ../tambah-proposal.php?error=$errMsg");
         exit;
       } else if(empty($skema)) {
-        $errMsg = "Anggota TIm is required";
+        $errMsg = "Skema is required";
         header("Location: ../tambah-proposal.php?error=$errMsg");
         exit;
       } else if(empty($bidang)) {

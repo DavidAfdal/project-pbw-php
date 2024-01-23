@@ -388,7 +388,7 @@ button{
     border-radius: 10px;
 }
 
-.next-btn a{
+button.next-btn{
     color: #fff;
     font-size: 15px;
     padding: 10px 25px;
@@ -397,7 +397,7 @@ button{
     border-radius: 10px;
 }
 
-.close-btn a{
+button.close-btn{
     color: #fff;
     font-size: 15px;
     padding: 10px 25px;
