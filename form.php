@@ -16,7 +16,7 @@
         <form action="./php/upload-proposal.php" method="post" enctype="multipart/form-data">
           <label for="">Nama Peneliti</label>
           <input type="text" name="peneliti" id="" />
-          <label for="">Judul Peneliti</label>
+          <label for="">Judul Penelitian</label>
           <input type="text" name="judul" id="" />
           <label for="">Tanggal Pembuatan Proposal</label>
           <input type="date" name="tanggal" id=""/>
