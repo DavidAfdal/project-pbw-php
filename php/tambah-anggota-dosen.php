@@ -26,7 +26,7 @@
            $stmt = $conn->prepare($sql);
            $stmt->execute([$nidn, $nama, $id_proposal]);
          $sm = "Sukses tambah annggota";
-         header("Location: ../.php?id_proposal=$id_proposal&success=$sm");
+         header("Location: ../anggota.php?id_proposal=$id_proposal&success=$sm");
         exit;
      
 
