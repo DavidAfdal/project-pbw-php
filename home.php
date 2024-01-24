@@ -39,7 +39,7 @@
       <div class="grid">
       <?php foreach ($proposals as $proposal): ?>
 
-          <a href="detail-proposal.php?id_proposal=<?php echo $proposal["id"] ?>" > 
+          <a href="detail-proposal.php?id_proposal=<?php echo $proposal["id"] ?>" class="link"> 
           <div class="card">
             <!-- <img src="./assets/proposal.png" alt="" /> -->
             <embed  src="./upload/<?php echo $proposal['file']?>#toolbar=0&navpanes=0&scrollbar=0" scrolling="no">
@@ -49,7 +49,7 @@
             >
               <p><?= $proposal['judul'] ?></p>
               <span class="d-flex align-items-center gap-2">
-                <i class="bx bx-check-circle"></i>
+              <i class="ri-hourglass-fill" style="font-size:20px"></i>
                 <p><?= $proposal['status'] ?></p>
               </span>
             </div>

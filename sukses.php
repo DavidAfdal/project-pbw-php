@@ -11,7 +11,7 @@
         <img src="./assets/check.png" alt="" />
 
         <p>
-          Terimakasih Mahesa Cahyadi atas partisipasinya. Proposal anda berhasil
+          Terimakasih <?=$_SESSION['nama']?> atas partisipasinya. Proposal anda berhasil
           disimpan dan akan dilanjutkan proses review dari tim terkait
         </p>
       </div>

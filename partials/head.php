@@ -16,6 +16,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+    <link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
 
     <link rel="stylesheet" href="./style/style.css" />
-    <title>Klinik P</title>
+    <title>Klinik Peneliti</title>

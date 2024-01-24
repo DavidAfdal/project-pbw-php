@@ -27,10 +27,11 @@
           <label for="">Bidang Ilmu</label>
           <input type="text" name="bidang" id=""/>
           <label for="">Uploud Proposal (PDF)</label>
-          <div class="file">
-            <input type="file" class="input-file" name="proposal" id="" />
+          <input type="file" class="input-file" name="proposal" id="file"/>
+      
+          <div class="d-flex justify-content-end">
+            <button type="submit" style="width:fit-content">Kirim Proposal</button>
           </div>
-          <button type="submit">Kirim Proposal</button>
         </form>
       </div>
       <?php include("./partials/footer.php"); ?>

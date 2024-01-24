@@ -30,6 +30,7 @@ if(isset($_POST['nidn']) && isset($_POST['password'])){
         if(password_verify($password, $user['password'])){
           $_SESSION['dosen'] = $user['dosen'];
           $_SESSION['nidn'] = $user['nidn'];
+          $_SESSION['nama'] = $user['nama'];
           $_SESSION['role'] = $user['role'];
 
           if($user['role'] == 'dosen'){

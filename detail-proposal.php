@@ -29,14 +29,14 @@
           <h3>Detail Proposal :</h3>
           <div class="">
             <a href="" class="review-btn">
-              <i class="bx bx-check-circle"></i>
+            <i class="ri-hourglass-fill" style="font-size:20px"></i>
               Sedang Ditinjau 
             </a>
           </div>
         </div>
         <div class="d-flex gap-5">
-          <div class="">
-            <img src="./assets/proposal.png" alt="" />
+          <div class="card">
+          <embed  src="./upload/<?php echo $proposal['file']?>#toolbar=0&navpanes=0&scrollbar=0" scrolling="no">
             <div
               class="footer-proposal d-flex align-items-center justify-content-center ">
               <a href="php/download.php?url=<?php echo $proposal['file']?>" class="link d-flex align-items-center gap-2">
