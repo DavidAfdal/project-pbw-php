@@ -15,6 +15,18 @@ body a{
     position: relative;
 }
 
+.card {
+    overflow: hidden;
+    border: none;
+}
+
+embed{
+    height: 400px;
+    width: calc(100% + 17px);
+    scrollbar-width: none;
+    /* overflow: hidden; */
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
