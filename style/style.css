@@ -457,3 +457,11 @@ button.close-btn{
 .input-file{
     margin-bottom: 0;
 }
+
+/* about */
+.about-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* about */
