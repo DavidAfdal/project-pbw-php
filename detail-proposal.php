@@ -38,10 +38,11 @@
           <div class="">
             <img src="./assets/proposal.png" alt="" />
             <div
-              class="footer-proposal d-flex justify-content-between align-items-center">
-              <a href="php/download.php?url=<?php echo $proposal['file']?>">
-                <p>Download</p>
-              </a>
+              class="footer-proposal d-flex align-items-center justify-content-center ">
+              <a href="php/download.php?url=<?php echo $proposal['file']?>" class="link d-flex align-items-center gap-2">
+              <i class='bx bxs-cloud-download fs-2'></i>
+              <p>Download</p>
+            </a>
             </div>
           </div>
           <div class="">
