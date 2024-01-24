@@ -486,3 +486,41 @@ a.link-auth, a.link-auth:hover {
     color: #232323;
 }
 
+/* .nav{
+    
+} */
+
+.about-nav{
+    background-color: #6b6fb6cf;
+    width: 900px;
+    color: #fff;
+    padding-inline: 20px;
+    padding-block: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-nav a{
+    color: #fff;
+    padding-right: 30px;
+}
+
+.about-desc{
+    background-color: #6b6fb6cf;
+    width: 900px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container{
+    flex-direction: column;
+    height: 100vh;
+}
+
+.panduan-active{
+    display: flex;
+}
+.panduan-unactive{
+    display: none;
+}

@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <?php include("./partials/head.php"); ?>
 </head>
 <body>
 <div class="background">
-      <div class="d-flex justify-content-between">
+  <div class="">
+    
+  </div>
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="nav">
+      <div class="d-flex justify-content-between about-nav align-items-center">
         <h1>Tentang kami</h1>
-        <ul>
-          <li><a href="">Login</a></li>
-          <li><a href="">Daftar</a></li>
-        </ul>
+        <div class="">
+          <a href="register.php">Daftar</a>
+          <a href="login.php" >Login</a>
+        </div>
       </div>
+    </div>
+
+    <div class="about-desc">
+      <div class="">
+        <p>
+          Website ini dibuat untuk membantu para dosen meriview jurnal yang dibuat, dosen 
+          dapat mengupload proposal dan akan di review oleh peninjau. Dosen dapat melihat
+          panduan pembuatan proposal dan mendapatkan review. Website ini dibuat oleh 
+          kelas 3KA05
+        </p>
+      </div>
+    </div>
+
+  </div>
     </div>
 
     <div class="info">
@@ -37,7 +53,7 @@
     </div>
 
 
-    <script src="./app.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </body>
 </html>

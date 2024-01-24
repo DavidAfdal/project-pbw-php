@@ -1,19 +1,18 @@
-const panduan = document.querySelector("#panduan")
+const panduan = document.getElementById("panduan")
 const infoButton = document.querySelector(".info")
 
 
-infoButton.onclick = (e) =>{
-  panduan.style.display = "flex"
-  e.preventDefault()
+infoButton.onclick = () =>{
+  panduan.classList.add('panduan-active')
 }
 
 
-const close = document.querySelector("#panduan")
+// const close = document.querySelector("#panduan")
 window.onclick = (e) =>{
-  if(e.target === close){
-    close.style.display = "none"
+  if(e.target === panduan){
+    panduan.classList.remove('panduan-active')
+    console.log("heloo dias");
   }
-  console.log("heloo dias");
 }
 
 
