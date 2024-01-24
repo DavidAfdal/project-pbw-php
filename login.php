@@ -17,6 +17,7 @@
             <label for="">Kata Sandi :</label>
             <input type="password" name="password" id="" />
             <button type="submit">Masuk</button>
+            <a href="register.php" class="link-auth">Daftar</a>
           </form>
         </div>
       </div>

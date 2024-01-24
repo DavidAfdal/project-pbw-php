@@ -28,7 +28,7 @@ Mitra
           <input type="text" name="nama" id="nama" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
               <button type="submit" class="next-btn">Tambah</button>
-              <button type="submit" class="close-btn">Batal</button>
+              <a href="sukses.php" type="submit" class="close-btn">Selesai</a>
           </div>
         </form>
 
@@ -39,7 +39,7 @@ Mitra
           <input type="text" name="nama" id="nama" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
               <button type="submit" class="next-btn">Tambah</button>
-              <button type="submit" class="close-btn">Batal</button>
+              <a href="sukses.php" type="submit" class="close-btn">Selesai</a>
         </div>
         </form>
        
@@ -50,7 +50,7 @@ Mitra
           <input type="text" name="nama" id="nama" />
           <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
                 <button type="submit" class="next-btn">Tambah</button>
-                <button type="submit" class="close-btn">Batal</button>
+                <a href="sukses.php" type="submit" class="close-btn">Selesai</a>
           </div>
         </div>
         </form>

@@ -15,6 +15,19 @@ body a{
     position: relative;
 }
 
+.card {
+    overflow-x: hidden;
+    border: none;
+    height: fit-content;
+}
+
+embed{
+    height: 400px;
+    width: calc(100% + 17px);
+    scrollbar-width: none;
+    /* overflow: hidden; */
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -141,6 +154,11 @@ button{
     font-size: 18px;
 }
 
+#file{
+    background-color: #fff;
+    width: 100%;
+}
+
 .proposal-komen{
     padding: 20px;
     background-color: #ffffff;
@@ -148,6 +166,7 @@ button{
     margin-bottom: 0px;
     font-size: 17px;
     font-weight: 500;
+    margin-top: 30px;
 }
 
 .komentar{
@@ -243,7 +262,6 @@ button{
     width: 450px;
     padding: 20px;
     background-color: #6B6FB6;
-    margin-bottom: 30px;
 }
 
 .footer-proposal p{
@@ -303,6 +321,7 @@ button{
 .daftar-box .proposal-btn,
 .form-box .proposal-btn,
 .check-box .proposal-btn {
+    margin-top: 25px;
     text-align: end;
 }
 
@@ -401,15 +420,23 @@ button.next-btn{
     background-color: #61AC3E;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
+    width: fit-content;
+    margin: 0;
 }
 
-button.close-btn{
+a.close-btn{
     color: #fff;
     font-size: 15px;
     padding: 10px 25px;
     background-color: #A11414;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
+}
+
+a.link-auth, a.link-auth:hover {
+   color: #fff;
+   text-align: center;
+   margin-top: 5px;
 }
 
 .daftar-box img{
@@ -456,12 +483,6 @@ button.close-btn{
 
 .input-file{
     margin-bottom: 0;
+    color: #232323;
 }
 
-/* about */
-.about-nav{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* about */

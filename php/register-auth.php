@@ -34,7 +34,7 @@
 
      if($stmt->rowCount() > 0){
          $em = "The nidn ($nidn) is taken";
-         header("Location: ../regiter.php?error=$em&$data");
+         header("Location: ../register.php?error=$em&$data");
           exit;
      }else {
          $password = password_hash($password, PASSWORD_DEFAULT);
@@ -51,7 +51,7 @@
   }
 
    } else {
-    header("Location: ../signup.php");
+    header("Location: ../register.php");
     exit;
    } 
 
